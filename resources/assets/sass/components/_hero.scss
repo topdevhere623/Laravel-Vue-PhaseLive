@@ -1,0 +1,51 @@
+.hero {
+    background: url("../img/new-hero.jpg");
+    height: 100vh;
+    background-size: cover;
+    margin-bottom: 2em;
+    position: relative;
+    // z-index: -1;
+
+    @media (max-width: 786px) {
+        height: 70vh;
+    }
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.hero-content {
+    h1 {
+        color: white;
+        font-family: $font-montserrat;
+        font-weight: 600;
+        font-size: 45px;
+        letter-spacing: 6px;
+        margin-bottom: 1.5em;
+        padding: 0 20px;
+
+        @media (max-width: 786px) {
+            font-size: 35px;
+        }
+    }
+    .button {
+        width: 280px;
+
+        h2 {
+            font-family: $font-montserrat;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin: 0 0 10px;
+        }
+        p {
+            font-family: $font-comfortaa;
+            font-size: 16px;
+        }
+    }
+}
+.hero-buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

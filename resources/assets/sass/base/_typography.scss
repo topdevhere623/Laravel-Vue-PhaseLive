@@ -1,0 +1,64 @@
+* {
+  font-family: $font-comfortaa;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  margin: 1em 0;
+
+  &.no-top {
+    margin-top: 0;
+  }
+
+  small {
+    font-size: 70%;
+    color: $color-grey2;
+  }
+}
+
+h1 {
+  font-size: 45px;
+}
+h2 {
+  font-size: 28px;
+  font-weight: normal;
+}
+
+p {
+  // ...
+}
+
+a {
+  color: black;
+
+  &.blue {
+    color: $color-blue;
+  }
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+
+hr {
+  border-color: $color-blue;
+  border-style: solid;
+
+  &.color-2 {
+    border-color: $color-2;
+  }
+}

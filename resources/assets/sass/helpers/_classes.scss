@@ -1,0 +1,172 @@
+// Page Content
+.page-content-padded {
+    padding: 2em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+
+    @media (max-width: 1000px) {
+        padding: 20px;
+    }
+}
+
+.error-message,
+.error-msg {
+    line-height: 2;
+    color: red;
+    font-size: 12px;
+    display: block;
+}
+
+// Centering
+.centered-inline {
+    display: inline;
+    text-align: center;
+}
+.centered-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.centered-text {
+    text-align: center;
+}
+
+// Floating
+.float-left {
+    float: left;
+}
+.float-right {
+    float: right;
+}
+
+// Font Styling
+.bold {
+    font-weight: bold;
+}
+.italic {
+    font-style: italic;
+}
+.underlined {
+    text-decoration: underline;
+}
+
+// Coloring
+.alert {
+    color: red;
+}
+
+// padding and margin
+.px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.pl-0 {
+    padding-left: 0px;
+}
+.pr-0 {
+    padding-right: 0px;
+}
+
+.mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.ml-0 {
+    margin-left: 0px;
+}
+.mr-0 {
+    margin-right: 0px;
+}
+
+.py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.pt-0 {
+    padding-top: 0px;
+}
+.pb-0 {
+    padding-bottom: 0px;
+}
+
+.my-0 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.mt-0 {
+    margin-top: 0px;
+}
+.mb-0 {
+    margin-bottom: 0px;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+}
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.clearboth::before,
+.clearboth::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.w-full {
+    width: 100%;
+}
+
+ul.list-unstyled {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+ul.list-inline li {
+    float: left;
+}
+
+.text-blue {
+    color: $color-blue2;
+}
+
+.text-sm {
+    font-size: 14px;
+}
+.text-xs {
+    font-size: 12px;
+}
+.flex {
+    display: flex;
+}
+.flex-col {
+    flex-direction: column;
+}
+.flex-row {
+    flex-direction: row;
+}
+.justify-center {
+    justify-content: center;
+}
+.align-center {
+    align-content: center;
+}
+.justify-between {
+    justify-content: space-between;
+}

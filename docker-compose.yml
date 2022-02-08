@@ -1,0 +1,113 @@
+version: '3'
+
+networks:
+  laravel:
+
+services:
+  webserver:
+    image: nginx:alpine
+    container_name: phase_webserver
+    tty: true
+    restart: unless-stopped
+    ports:
+      - "8008:80"
+      - "8443:443"
+    volumes:
+      - ./:/var/www/html:cached
+      - ./dockerfiles/nginx/conf.d:/etc/nginx/conf.d
+    depends_on:
+      - php
+      - redis
+      - mysql
+    networks:
+      - laravel
+
+  mysql:
+    image: mariadb:10.6
+    container_name: phase_mysql
+    restart: unless-stopped
+    tty: true
+    ports:
+      - 3306:3306
+    volumes:
+      - ./docker/mysql/data:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: homestead
+      MYSQL_USER: homestead
+      MYSQL_PASSWORD: secret
+      MYSQL_ROOT_PASSWORD: secret
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    networks:
+      - laravel
+
+  php:
+    build:
+      context: ./dockerfiles
+      dockerfile: php.dockerfile
+      args:
+        - UID=${UID:-1000}
+        - GID=${GID:-1000}
+    container_name: phase_php
+    volumes:
+      - ./:/var/www/html:delegated
+    networks:
+      - laravel
+
+  redis:
+    image: redis:alpine
+    container_name: phase_redis
+    restart: unless-stopped
+    ports:
+      - 6379:6379
+    networks:
+      - laravel
+
+  composer:
+    build:
+      context: ./dockerfiles
+      dockerfile: composer.dockerfile
+      args:
+        - UID=${UID:-1000}
+        - GID=${GID:-1000}
+    container_name: phase_composer
+    volumes:
+      - ./:/var/www/html
+    working_dir: /var/www/html
+    depends_on:
+      - php
+    user: laravel
+    command: install
+    # entrypoint: ['composer']
+    networks:
+      - laravel
+
+  npm:
+    image: node:13.7
+    container_name: phase_npm
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - 3000:3000
+      - 3001:3001
+    working_dir: /var/www/html
+    entrypoint: ['npm']
+    networks:
+      - laravel
+
+  artisan:
+    build:
+      context: ./dockerfiles
+      dockerfile: php.dockerfile
+      args:
+        - UID=${UID:-1000}
+        - GID=${GID:-1000}
+    container_name: phase_artisan
+    volumes:
+      - ./:/var/www/html:delegated
+    depends_on:
+      - mysql
+    working_dir: /var/www/html
+    entrypoint: ['php', '/var/www/html/artisan']
+    networks:
+      - laravel

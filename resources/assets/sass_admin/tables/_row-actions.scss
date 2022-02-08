@@ -1,0 +1,22 @@
+.has-actions {
+	.row-actions {
+		opacity: 0;
+		transition: opacity .3s ease;
+		font-size: 11px;
+		padding: 5px 0;
+		text-decoration: none;
+		margin: 0 -2px;
+
+		span {
+			padding: 0 2px;
+
+			&.bin a {
+				color: $error_red;
+			}
+		}
+	}
+
+	&:hover .row-actions {
+		opacity: 1;
+	}
+}

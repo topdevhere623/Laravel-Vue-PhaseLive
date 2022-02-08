@@ -1,0 +1,69 @@
+/**
+ *
+ * FONTS
+ *
+ */
+$font-comfortaa: "Comfortaa", cursive;
+$font-montserrat: "Montserrat", sans-serif;
+
+/**
+ *
+ * COLORS
+ *
+ */
+:root {
+  --strong-blue: #3300ff;
+  --very-light-pink: #e6e6e6;
+  --light-aqua: #9eefe1;
+  --black: #000000;
+  --brown-grey: #848484;
+  --white: #ffffff;
+  --bright-sky-blue: #00ccff;
+  --cyan: #00ffff;
+  --primary-blue: #0000ff;
+  --cloudy-blue: #bcbec0;
+}
+
+
+$color-blue: #3300ff;
+$color-blue2: #366efc;
+
+$color-2: #9eefe1;
+
+$color-grey: #e6e6e6;
+$color-grey2: #a5a5a5;
+$color-grey3: #221f1f;
+$color-grey4: #7d7d7d;
+
+$color-green: #33cc99;
+$color-orange: #ff9933;
+
+// Main Colour Declarations
+$color-primary: $color-blue;
+$color-secondary: $color-2;
+$color-footer-upper: $color-grey;
+$color-footer-lower: $color-blue2;
+
+/*
+ * State Colors
+ */
+// Success
+$color-state-success-bg: #fcfff5;
+$color-state-success-text: #2c662d;
+$color-state-success-shadow: #a3c293;
+$color-state-success-header-text: #1a531b;
+
+// Error
+$color-state-error-bg: #fff6f6;
+$color-state-error-text: #9f3a38;
+$color-state-error-shadow: #e0b4b4;
+$color-state-error-header-text: #912d2b;
+
+// Warn
+$color-state-warn-bg: #fffaf3;
+$color-state-warn-text: #573a08;
+$color-state-warn-shadow: #c9ba9b;
+$color-state-warn-header-text: #794b02;
+
+$padding-sm: 15px;
+$padding-xs: 8px;

@@ -1,0 +1,139 @@
+.p-item {
+    min-height: 170px;
+    // padding: 18px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+
+    &.greyscale {
+        .item-track-progress-bar,
+        .item-track-playhead {
+            background: $color-grey3;
+        }
+        .player-control {
+            span:first-child {
+                color: $color-grey4;
+            }
+        }
+    }
+}
+.p-item-image {
+    margin-right: 2em;
+}
+.p-item-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    height: 100%;
+    padding: 0.5em 0;
+    box-sizing: border-box;
+
+    @media (max-width: 500px) {
+        height: auto;
+    }
+
+    @media (max-width: 420px) {
+        padding-bottom: 1em;
+    }
+}
+.p-item-detail {
+    position: relative;
+}
+.p-item-title {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+
+    @media (max-width: 500px) {
+        font-size: 22px !important;
+    }
+
+    @media (max-width: 450px) {
+        font-size: 20px !important;
+    }
+
+    @media (max-width: 420px) {
+        font-size: 18px !important;
+    }
+
+    @media (max-width: 390px) {
+        font-size: 16px !important;
+    }
+
+    @media (max-width: 345px) {
+        font-size: 14px !important;
+    }
+}
+.p-player-control {
+    cursor: pointer;
+
+    span:first-child {
+        color: blue;
+    }
+    span:last-child {
+        color: white;
+    }
+}
+.p-item-subtitle {
+    font-weight: bold;
+    font-size: 14px;
+}
+.p-item-phase-logo {
+    width: 52px;
+    height: 32px;
+    background: url("/img/logo-colored.png");
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.p-item-track-progress {
+    padding: 7px 7px;
+    cursor: pointer;
+    position: relative;
+    height: 5px;
+    overflow: hidden;
+
+}
+.p-item-track-progress-bar {
+    height: 3px;
+    background: $color-blue;
+    width: 0;
+    position: relative;
+}
+.p-item-track-progress-bar-background {
+    width: 100%;
+    height: 3px;
+    background: #ccc;
+    position: absolute;
+    left: 7px;
+    top: 7px;
+}
+.p-item-track-playhead {
+    width: 12.5px;
+    height: 12.5px;
+    background: $color-blue;
+    border-radius: 50%;
+    position: absolute;
+    top: -4px;
+    right: -6.25px;
+}
+.p-item-meta {
+    font-size: 9px;
+    display: flex;
+
+    @media (max-width: 345px) {
+        font-size: 8px;
+        padding-top: 0.5em;
+    }
+
+    & > div {
+        display: flex;
+        align-items: center;
+    }
+}
+.p-item-time {
+    flex: 1;
+    justify-content: flex-end;
+    color: #848484;
+}

@@ -1,0 +1,21 @@
+aside.sidebar-right, aside.sidebar-left {
+  min-width: 250px;
+  max-width: 500px;
+  flex-basis: 18%;
+}
+
+.sidebar-left {
+  display: none;
+
+  @media screen and (min-width: 950px){
+    display: block;
+  }
+}
+.sidebar-right {
+  display: none;
+  margin-left: 1em;
+
+  @media screen and (min-width: 1300px){
+    display: block;
+  }
+}

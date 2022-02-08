@@ -1,0 +1,21 @@
+html,
+body,
+.body {
+    min-height: 100vh;
+    min-width: 100%;
+    //overflow-x: hidden;
+    //overflow-y: scroll;
+}
+.body {
+    display: flex;
+    flex-direction: column;
+    font-family: $font-comfortaa;
+  @media(max-width: 768px){
+    overflow: hidden;
+  }
+}
+
+.snotifyToast__inner {
+    flex-flow: nowrap !important;
+    padding: 0 !important;
+}

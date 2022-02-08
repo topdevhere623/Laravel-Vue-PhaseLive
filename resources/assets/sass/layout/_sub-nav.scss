@@ -1,0 +1,16 @@
+nav.sub-nav {
+  margin-bottom: 2em;
+  li {
+    display: inline-block;
+    font-size: 19px;
+    margin: 0 0.5em 0.5em 0;
+
+    a {
+      text-decoration: none;
+
+      &.router-link-exact-active {
+        text-decoration: underline;
+      }
+    }
+  }
+}

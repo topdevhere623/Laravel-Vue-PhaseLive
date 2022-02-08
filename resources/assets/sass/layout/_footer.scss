@@ -1,0 +1,107 @@
+footer.main {
+    background: #555;
+
+    .footer-upper {
+        background: $color-footer-upper;
+        padding: 1em 80px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+
+        @media (max-width: 1000px) {
+            padding: 40px 20px;
+        }
+
+        & > div {
+            flex-basis: 24%;
+
+            @media (max-width: 1072px) {
+                flex-basis: 100%;
+            }
+        }
+
+        .footer-logo {
+            margin-right: 5em;
+        }
+        .footer-links {
+            display: flex;
+            margin-right: 5em;
+            display: flex;
+            flex-basis: 55%;
+
+            @media (max-width: 559px) {
+                flex-direction: column;
+                flex-basis: 100%;
+            }
+
+            ul.footer-menu {
+                @media (max-width: 1072px) {
+                    margin: 0 20px 0 0;
+                }
+            }
+            li {
+                margin: 1em 0;
+            }
+        }
+
+        .footer-social {
+            display: flex;
+            flex-wrap: wrap;
+            flex: 1;
+            justify-content: end;
+            a {
+                padding-left: 20px;
+                font-size: 20px;
+            }
+
+            @media (max-width: 1072px) {
+                display: flex;
+                justify-content: flex-start;
+                margin-top: 20px;
+
+                a {
+                    padding: 0 10px 0 0;
+                }
+            }
+        }
+    }
+
+    .footer-lower {
+        color: white;
+        background: $color-footer-lower;
+        height: 70px;
+        width: 100%;
+        padding: 0 80px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: 1000px) {
+            padding: 40px 20px;
+        }
+
+        .footer-lower-menu {
+            li {
+                position: relative;
+                display: inline-block;
+                margin: 0 20px;
+
+                a {
+                    color: #fff;
+                }
+
+                &:after {
+                    content: "|";
+                    position: absolute;
+                    right: -20px;
+                }
+
+                &:last-child:after {
+                    content: "";
+                }
+            }
+        }
+    }
+}
